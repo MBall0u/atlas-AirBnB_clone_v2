@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Start of Web Framework"""
 from flask import Flask
 
 app = Flask(__name__)
