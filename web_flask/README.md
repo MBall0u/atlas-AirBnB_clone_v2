@@ -1,1 +1,1 @@
-this is the readme for the webflask directory
+This is for the project AirBnB clone - Web framework
