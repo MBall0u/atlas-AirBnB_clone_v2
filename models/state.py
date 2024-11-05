@@ -9,7 +9,7 @@ from models.__init__ import HBNB_TYPE_STORAGE
 class State(BaseModel, Base):
     """ State class """
     __tablename__ = 'states'
-    if HBNB_TYPE_STORAGE == 'db':
+    if BaseModel.HBNB_TYPE_STORAGE == 'db':
         name = Column(String(128), nullable=False)
         cities = relationship("City", backref="state", cascade="all, delete")
     else:
