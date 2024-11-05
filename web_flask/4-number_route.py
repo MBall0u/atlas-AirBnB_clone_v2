@@ -32,7 +32,7 @@ def is_number(n):
         is_int = int(n)
         return "{} is a number".format(is_int)
     except ValueError:
-        return "404"
+        return 404
 
 
 if __name__ == '__main__':
