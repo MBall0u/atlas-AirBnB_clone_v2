@@ -48,10 +48,7 @@ def number_template(n):
 def number_odd_or_even(n):
     try:
         is_int = int(n)
-        if n % 2 == 0:
-            odd_or_even = "even"
-        else:
-            odd_or_even = "odd"
+        odd_or_even = is_int % 2
         return render_template("6-number_odd_or_even.html", num=n, odd_or_even=odd_or_even)
     except ValueError:
         abort(404)
