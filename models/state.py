@@ -3,13 +3,13 @@
 from models.base_model import BaseModel, Base
 from sqlalchemy import Column, String
 from sqlalchemy.orm import relationship
-from models.engine import storage_type
+from models.__init__ import HBNB_TYPE_STORAGE
 
 
 class State(BaseModel, Base):
     """ State class """
     __tablename__ = 'states'
-    if storage_type == 'db':
+    if HBNB_TYPE_STORAGE == 'db':
         name = Column(String(128), nullable=False)
         cities = relationship("City", backref="state", cascade="all, delete")
     else:
