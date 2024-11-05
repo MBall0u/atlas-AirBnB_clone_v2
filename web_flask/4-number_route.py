@@ -30,8 +30,7 @@ def python(text="is_cool"):
 def is_number(n):
     if type(n) is int:
         return "{} is a number".format(n)
-    else:
-        continue
+    continue
 
 
 if __name__ == '__main__':
