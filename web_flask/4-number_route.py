@@ -28,9 +28,11 @@ def python(text="is_cool"):
 
 @app.route("/number/<n>", strict_slashes=False)
 def is_number(n):
-    if type(n) is int:
-        return "{} is a number".format(n)
-    pass
+    try:
+        is_int = int(n)
+        return "{} is a number".format(is_int)
+    except ValueError:
+        return "n is not a number"
 
 
 if __name__ == '__main__':
